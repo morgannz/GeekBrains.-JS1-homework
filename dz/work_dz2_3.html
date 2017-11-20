@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+<script>
+    var a = prompt('Введите значение переменной a',0);
+    var b = prompt('Введите значение переменной b',0);
+    if ((a > -1) && (b > -1)) {
+        document.write('Разность чисел равна ' + (a - b));
+    } else if ((a < -1) && (b < -1)) {
+        document.write('Произведение чисел равно ' + (a * b));
+    } else {
+        document.write('Сумма чисел равна ' + (parseInt(a) + parseInt(b)));
+    }
+</script>
+</body>
+</html>

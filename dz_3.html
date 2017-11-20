@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание №3 по курсу JavaScript 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<hr>
+<section>
+    <h1>Домашнее задание №3</h1>
+    <a href="index.html">
+        <div class="back"><p>на главную</p></div>
+    </a>
+    <section class="main">
+        <div class="block">
+            <p><b>Задание 1:</b> С помощью цикла while вывести все простые числа в промежутке от 0 до 100</p>
+            <textarea rows="9" cols="150">
+
+<script>
+    var x = 0;
+    while (x <= 100) {
+        document.write(x + '<br>');
+        x++;
+    }
+</script>
+            </textarea>
+            <a class="button" href="dz/work_dz3_1.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+        <div class="block">
+            <p><b>Задание 2:</b> С помощью цикла do…while написать функцию для вывода чисел от 0 до 10, чтобы результат
+                выглядел так:<br>
+                0 – это ноль<br>
+                1 – нечетное число<br>
+                2 – четное число<br>
+                3 – нечетное число<br>
+                …<br>
+                10 – четное число</p>
+            <textarea rows="18" cols="150">
+
+<script>
+    var x = 0;
+    function count(x) {
+        if (x == 0) {
+            document.write(x + ' - это ноль<br>');
+        } else if (x%2 == 0) {
+            document.write(x + ' - четное число<br>');
+        } else {
+            document.write(x + ' - нечетное число<br>');
+        }
+    }
+    do {
+        count(x);
+        x++;
+    } while (x <= 10);
+</script>
+            </textarea>
+            <a class="button" href="dz/work_dz3_2.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+        <div class="block">
+            <p><b>* Задание 3 (повышенной сложности):</b> Вывести с помощью цикла for числа от 0 до 9, НЕ используя тело
+                цикла. То есть выглядеть должно вот так:
+                for(…){// здесь пусто}</p>
+            <textarea rows="6" cols="150">
+
+<script>
+    for (var x = 0; x < 10; document.write(x++)) {
+    }
+</script>
+
+            </textarea>
+            <a class="button" href="dz/work_dz3_3.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+        <div class="block">
+            <p><b>* Задание 4 (повышенной сложности):</b> Нарисовать пирамиду с помощью console.log, как показано на
+                рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:<br>
+                x<br>
+                xx<br>
+                xxx<br>
+                xxxx<br>
+                xxxxx</p>
+            <textarea rows="11" cols="150">
+
+<script>
+    var a = 0,
+    symbol = '';
+    while (a < 20) {
+        symbol += 'x';
+        console.log(symbol);
+        a++;
+    }
+</script>
+            </textarea>
+            <a class="button" href="dz/work_dz3_4.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+
+    </section>
+
+</section>
+<footer>
+    <p class="copy">&copy; All rights reserved. 2017</p>
+</footer>
+</body>
+</html>

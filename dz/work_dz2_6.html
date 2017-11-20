@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+<script>
+    var arg1 = prompt('Введите значение переменной arg1', 0);
+    var arg2 = prompt('Введите значение переменной arg2', 0);
+    var operation = prompt('Введите одну из операций (+, -, *, /)', 0);
+
+    switch (operation) {
+        case '+':
+            document.write('Сумма чисел равна ' + (parseInt(arg1) + parseInt(arg2)));
+            break;
+        case '-':
+            document.write('Разность чисел равна ' + (arg1 - arg2));
+            break;
+        case '*':
+            document.write('Произведение чисел равно ' + (arg1 * arg2));
+            break;
+        case '/':
+            document.write('Частное от деления чисел равно ' + (arg1 / arg2));
+            break;
+
+        default:
+            document.write('Вы ввели неверную операцию');
+            break;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+<script>
+    var x = 0;
+    function count(x) {
+        if (x == 0) {
+            document.write(x + ' - это ноль<br>');
+        } else if (x%2 == 0) {
+            document.write(x + ' - четное число<br>');
+        } else {
+            document.write(x + ' - нечетное число<br>');
+        }
+    }
+    do {
+        count(x);
+        x++;
+    } while (x <= 10);
+</script>
+</body>
+</html>

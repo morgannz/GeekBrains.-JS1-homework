@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание №1 по курсу JavaScript 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<hr>
+<section>
+    <h1>Домашнее задание №1</h1>
+    <a href="index.html">
+        <div class="back"><p>на главную</p></div>
+    </a>
+    <section class="main">
+        <div class="block">
+            <p><b>Задание 1:</b> Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в
+                градусах по Фаренгейту.
+                <br>Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc –
+                температура по Цельсию</p>
+            <textarea rows="7" cols="150">
+
+    <script>
+        var Tc = prompt('Введите температуру в градусах Цельсия:', 0);
+        var Tf = (9 / 5) * Tc + 32;
+        alert('Температура в градусах Фаренгейта равна: ' + Tf)
+    </script>
+            </textarea>
+            <a class="button" href="dz/work_dz1_1.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+        <div class="block">
+            <p><b>Задание 2:</b> Объявить две переменные: admin и name. Записать в name строку "Василий"; Скопировать
+                значение из name в admin. Вывести admin (должно вывести «Василий»).</p>
+            <textarea rows="7" cols="150">
+
+    <script>
+        var name = 'Василий';
+        var admin = name;
+        alert(admin);
+    </script>
+            </textarea>
+            <a class="button" href="dz/work_dz1_2.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+        <div class="block">
+            <p><b>* Задание 3 (повышенной сложности):</b> Чему будет равно JS-выражение 1000 + "108";</p>
+            <textarea rows="6" cols="150">
+
+    <script>
+        var x = 1000 + "108"; // конкатенация числа и строки будет равна '1000108'
+        document.write(x);
+    </script>
+            </textarea>
+        </div>
+    </section>
+</section>
+<footer>
+    <p class="copy">&copy; All rights reserved. 2017</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+<script>
+    var a = prompt('Введите значение переменной a',0);
+    var b = prompt('Введите значение переменной b',0);
+    function addition(a, b) {
+        return parseInt(a) + parseInt(b);
+    }
+    document.write('Сумма чисел ' + a + ' и ' + b + ' равна ' + addition(a, b) + '<br>');
+
+    function subtraction(a, b) {
+        return a - b;
+    }
+    document.write('Разность чисел ' + a + ' и ' + b + ' равна ' + subtraction(a, b) + '<br>');
+
+    function multiplication(a, b) {
+        return a * b;
+    }
+    document.write('Произведение чисел ' + a + ' и ' + b + ' равно ' + multiplication(a, b) + '<br>');
+
+    function division(a, b) {
+        return a / b;
+    }
+    document.write('Частное от деления чисел ' + a + ' и ' + b + ' равно ' + division(a, b));
+</script>
+</body>
+</html>

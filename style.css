@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: #efefef;
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 40px 0 25px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.68);
+    font-style: normal;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 22px;
+    font-style: normal;
+    text-align: center;
+    color: #545454;
+    margin: 60px 0 10px;
+    text-shadow: 0 1px 1px rgba(150, 150, 150, 0.68);
+    font-style: normal;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+}
+
+hr {
+    border: 20px solid dimgrey;
+    box-shadow: 0 5px 7px rgba(168, 168, 168, 0.5);
+}
+
+.homework {
+    margin: 0 auto;
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.title {
+    margin-top: 30px;
+    padding: 60px 70px;
+    background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease-out;
+}
+
+.title:hover {
+    margin-top: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #f6f6f6;
+}
+
+.title:active {
+    margin-top: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.title-inactive {
+    margin-top: 30px;
+    padding: 60px 70px;
+    background-color: #f0f0f0;
+    border: 2px solid #9d9d9d;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(168, 168, 168, 0.5);
+}
+
+section {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+.main {
+    width: 1070px;
+    margin: 100px auto 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a .title:hover {
+    background-color: #bfbfbf;
+}
+
+.p-name {
+    font-size: 18px;
+    font-style: normal;
+    text-align: right;
+    color: #545454;
+    margin: 40px 220px 30px 0;
+}
+
+.back {
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    width: 120px;
+    height: 30px;
+    background: grey;
+}
+
+.back:hover {
+    top: 81px;
+    box-shadow: 2px 2px 20px rgba(168, 168, 168, 0.5);
+    background: #575757;
+}
+
+.back:hover:before {
+    border-right: 70px solid #575757;
+}
+
+.back:active {
+    top: 83px;
+    box-shadow: 2px 2px 20px rgba(168, 168, 168, 0.5);
+}
+
+.back:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -70px;
+    border-top: 30px solid transparent;
+    border-right: 70px solid grey;
+    border-bottom: 30px solid transparent;
+}
+
+.back p {
+    width: 110px;
+    display: block;
+    position: absolute;
+    top: -35px;
+    color: black;
+    margin: 40px 0 30px 10px;
+    transition: all 0.1s ease-out;
+}
+
+.back p:hover {
+    color: #f7f7f7;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    margin-bottom: 8px;
+}
+
+.main div p {
+    margin: 20px 0 10px 10px;
+}
+
+.block {
+    margin-top: 60px;
+}
+
+.button {
+    padding: 10px 5px;
+    display: table-cell;
+    width: 220px;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    background-color: lightgrey;
+    transition: background-color 0.5s ease-out;
+}
+
+.button:hover {
+    background-color: grey;
+    color: white;
+}
+
+.remark {
+    font-size: 12px;
+    color: grey;
+}
+
+.copy {
+    display: block;
+    padding: 110px 0 0 30px;
+}
+
+footer {
+    width: 100%;
+    height: 180px;
+    margin-top: 50px;
+    background-color: dimgrey;
+}

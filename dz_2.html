@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание №2 по курсу JavaScript 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<hr>
+<section>
+    <h1>Домашнее задание №2</h1>
+    <a href="index.html">
+        <div class="back"><p>на главную</p></div>
+    </a>
+    <section class="main">
+        <div class="block">
+            <p><b>Задание 1:</b> Дан код. Почему код даёт именно такие результаты?</p>
+            <textarea rows="15" cols="150">
+
+    <script>
+        var a = 1, b = 1, c, d;
+        c = ++a;
+        alert(c); // 2 - т.к. операция префикс-инкремента возвращает значение уже изменённой переменной (1 + 1 = 2)
+        d = b++;
+        alert(d); // 1 - т.к. операция пост-инкремента ещё не сработала.
+        c = (2 + ++a);
+        alert(c); // 5 - значение a == 2, +префикс-инкремент, +2 итого получаем 5
+        d = (2 + b++);
+        alert(d); // 4 - в предыдущем случае b увеличили на 1, соответсвенно 2 + 2 == 4
+        alert(a); // 3 - исходное значение 1 + префикс-инкремент + префикс-инкремент == итого 3
+        alert(b); // 3 - исходное значение 1 + пост-инкремент + пост-инкремент == итого 3
+    </script>
+            </textarea>
+        </div>
+        <div class="block">
+            <p><b>Задание 2:</b> Чему будет равен x в примере ниже?</p>
+            <textarea rows="6" cols="150">
+
+<script>
+    var a = 2;
+    var x = 1 + (a *= 2); // x == 5, т.к. (a *= 2) равно (a = a * 2)
+</script>
+            </textarea>
+        </div>
+        <div class="block">
+            <p><b>Задание 3:</b> Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать
+                скрипт, который работает по следующему принципу:
+            <ul>
+                <li> если a и b положительные, вывести их разность;</li>
+                <li> если а и b отрицательные, вывести их произведение;</li>
+                <li> если а и b разных знаков, вывести их сумму;</li>
+            </ul>
+            ноль можно считать положительным числом.</p>
+            <textarea rows="13" cols="150">
+
+<script>
+    var a = prompt('Введите значение переменной a',0);
+    var b = prompt('Введите значение переменной b',0);
+    if ((a > -1) && (b > -1)) {
+        document.write('Разность чисел равна ' + (a - b));
+    } else if ((a < -1) && (b < -1)) {
+        document.write('Произведение чисел равно ' + (a * b));
+    } else {
+        document.write('Сумма чисел равна ' + (parseInt(a) + parseInt(b)));
+    }
+</script>
+            </textarea>
+            <a class="button" href="dz/work_dz2_3.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+        <div class="block">
+            <p><b>Задание 4:</b> Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15.</p>
+            <textarea rows="22" cols="150">
+
+<script>
+    var a = Math.round(Math.random() * (15 - 1) + 1);
+    switch (a) {
+        case 1: document.write(1);
+        case 2: document.write(2);
+        case 3: document.write(3);
+        case 4: document.write(4);
+        case 5: document.write(5);
+        case 6: document.write(6);
+        case 7: document.write(7);
+        case 8: document.write(8);
+        case 9: document.write(9);
+        case 10: document.write(10);
+        case 11: document.write(11);
+        case 12: document.write(12);
+        case 13: document.write(13);
+        case 14: document.write(14);
+        case 15: document.write(15);
+    }
+</script>
+            </textarea>
+            <a class="button" href="dz/work_dz2_4.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+        <div class="block">
+            <p><b>Задание 5:</b> Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.</p>
+            <textarea rows="25" cols="150">
+
+<script>
+    var a = prompt('Введите значение переменной a',0);
+    var b = prompt('Введите значение переменной b',0);
+    function addition(a, b) {
+        return parseInt(a) + parseInt(b);
+    }
+    document.write('Сумма чисел равна ' + addition(a, b));
+
+    function subtraction(a, b) {
+        return a - b;
+    }
+    document.write('Разность чисел равна ' + subtraction(a, b));
+
+    function multiplication(a, b) {
+        return a * b;
+    }
+    document.write('Произведение чисел равно ' + multiplication(a, b));
+
+    function division(a, b) {
+        return a / b;
+    }
+    document.write('Частное от деления чисел равно ' + division(a, b));
+</script>
+            </textarea>
+            <a class="button" href="dz/work_dz2_5.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+        <div class="block">
+            <p><b>Задание 6:</b> Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).</p>
+            <textarea rows="26" cols="150">
+
+<script>
+    var arg1 = prompt('Введите значение переменной arg1', 0);
+    var arg2 = prompt('Введите значение переменной arg2', 0);
+    var operation = prompt('Введите одну из операций (+, -, *, /)', 0);
+
+    switch (operation) {
+        case '+':
+            document.write('Сумма чисел равна ' + (parseInt(arg1) + parseInt(arg2)));
+            break;
+        case '-':
+            document.write('Разность чисел равна ' + (arg1 - arg2));
+            break;
+        case '*':
+            document.write('Произведение чисел равно ' + (arg1 * arg2));
+            break;
+        case '/':
+            document.write('Частное от деления чисел равно ' + (arg1 / arg2));
+            break;
+
+        default:
+            document.write('Вы ввели неверную операцию');
+            break;
+    }
+</script>
+            </textarea>
+            <a class="button" href="dz/work_dz2_6.html" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+        <div class="block">
+            <p><b>* Задание 7 (повышенной сложности):</b>С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power(val, pow), где val – заданное число, pow – степень.</p>
+            <textarea rows="3" cols="150">
+
+            </textarea>
+            <a class="button" href="#" target="_blank">Проверить работу кода</a>
+            <span class="remark"><i>*откроется в новом окне</i></span>
+        </div>
+
+    </section>
+
+</section>
+<footer>
+    <p class="copy">&copy; All rights reserved. 2017</p>
+</footer>
+Выберите задание:
+document.getElementById('qwe').innerHTML='новое содержимое объекта с ID=qwe';
+
+</body>
+</html>
